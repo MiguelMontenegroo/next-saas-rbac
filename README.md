@@ -92,4 +92,12 @@ Turborepo:  ferramenta de build e gerenciamento de monorepos, criada para otimiz
 
 CASL: biblioteca JavaScript voltada para a implementação de controle de acesso baseado em regras
 
+zod: biblioteca TypeScript para validação e definição de esquemas de dados
+
 PRISMA: O Prisma ORM é um mapeador objeto-relacional (ORM) moderno para Node.js e TypeScript, que facilita a interação com bancos de dados SQL, como PostgreSQL, MySQL e SQLite.
+
+brcryptjs: biblioteca JavaScript para hash de senhas.
+
+fakerjs:  biblioteca JavaScript usada para gerar dados falsos (mock data) de forma aleatória.
+
+Fastify Swagger UI: O Fastify Swagger UI é uma ferramenta que permite gerar e visualizar automaticamente a documentação de APIs criadas com o Fastify, usando o Swagger UI
