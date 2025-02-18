@@ -100,4 +100,6 @@ brcryptjs: biblioteca JavaScript para hash de senhas.
 
 fakerjs:  biblioteca JavaScript usada para gerar dados falsos (mock data) de forma aleatória.
 
+Fastify: O Fastify é um framework web para Node.js focado em desempenho, baixo consumo de recursos e extensibilidade.
+
 Fastify Swagger UI: O Fastify Swagger UI é uma ferramenta que permite gerar e visualizar automaticamente a documentação de APIs criadas com o Fastify, usando o Swagger UI
