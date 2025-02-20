@@ -9,7 +9,7 @@ import { z } from "zod";
 export async function getOrganizations(app: FastifyInstance) {
   app.withTypeProvider<ZodTypeProvider>().register(auth).get('/organizations', {
     schema: {
-      tags: ['Organizations'],
+      tags: ['organizations'],
       summary: 'Get organization where user is a member',
       security: [{ bearerAuth: [] }],
       response: {
