@@ -9,7 +9,7 @@ import { projectSchema } from "@saas/auth";
 import { BadRequestError } from "../_errors/bad-request-error";
 
 export async function updateProject(app: FastifyInstance) {
-  app.withTypeProvider<ZodTypeProvider>().register(auth).delete('/organizations/:slug/projects/:projectId', {
+  app.withTypeProvider<ZodTypeProvider>().register(auth).put('/organizations/:slug/projects/:projectId', {
     schema: {
       tags: ['projects'],
       summary: 'Update a project',
