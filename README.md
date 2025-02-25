@@ -90,6 +90,8 @@ Roles & permissions.
 
 Tecnologias:
 
+Back-end:
+
 Turborepo:  ferramenta de build e gerenciamento de monorepos, criada para otimizar o processo de desenvolvimento em projetos
 
 CASL: biblioteca JavaScript voltada para a implementação de controle de acesso baseado em regras
@@ -105,3 +107,9 @@ fakerjs:  biblioteca JavaScript usada para gerar dados falsos (mock data) de for
 Fastify: O Fastify é um framework web para Node.js focado em desempenho, baixo consumo de recursos e extensibilidade.
 
 Fastify Swagger UI: O Fastify Swagger UI é uma ferramenta que permite gerar e visualizar automaticamente a documentação de APIs criadas com o Fastify, usando o Swagger UI
+
+------------
+
+Front-end:
+
+Shadcn/ui: biblioteca de componentes para React baseada no Radix UI e estilizada com Tailwind CSS
