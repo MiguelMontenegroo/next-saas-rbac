@@ -115,3 +115,5 @@ Front-end:
 Shadcn/ui: biblioteca de componentes para React baseada no Radix UI e estilizada com Tailwind CSS.
 
 KY: biblioteca JavaScript leve para fazer requisições HTTP, funcionando como uma alternativa simplificada ao fetch e ao axios.
+
+cookies-next: biblioteca para Next.js que facilita o gerenciamento de cookies no lado do cliente e do servidor.

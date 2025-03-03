@@ -12,6 +12,7 @@ import { AlertTriangle, Loader2 } from 'lucide-react'
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { useFormState } from "@/hooks/use-form-state"
 import { useRouter } from "next/navigation"
+import { signInWithGithub } from "../actions"
 
 export function SignInForm() {
   const router = useRouter()
@@ -25,6 +26,7 @@ export function SignInForm() {
   
 
   return (
+    <div className="space-y-4">
     <form onSubmit={handleSubmit} className="space-y-4">
      {success === false && message && (
       <Alert variant="destructive">
@@ -57,7 +59,7 @@ export function SignInForm() {
         </Link>
       </div>
 
-   <Button type="submit" className="w-full" disabled={isPending}>{isPending ? <Loader2 className="size-4 animate-spin"/> : 'Sign in with e-mail'}</Button>
+   <Button type="submit" className="w-full" disabled={isPending}>{isPending ? ( <Loader2 className="size-4 animate-spin"/> ) : ( 'Sign in with e-mail' )}</Button>
     
    <Button variant="link" className="w-full" size="sm" asChild>
       <Link href="/auth/sign-up">
@@ -65,12 +67,17 @@ export function SignInForm() {
     </Link>
     </Button>
 
-    <Separator />
-
-    <Button type='submit' className="w-full" variant="outline">
-      <Image src={githubIcon} className="size-4 mr-2 dark:invert" alt=""/>
-      Sign in with GitHub
-    </Button>
+   
     </form>
+
+     <Separator />
+
+     <form action={signInWithGithub}>
+     <Button type='submit' className="w-full" variant="outline">
+       <Image src={githubIcon} className="size-4 mr-2 dark:invert" alt=""/>
+       Sign in with GitHub
+     </Button>
+     </form>
+     </div>
   )
 }
