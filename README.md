@@ -112,4 +112,6 @@ Fastify Swagger UI: O Fastify Swagger UI é uma ferramenta que permite gerar e v
 
 Front-end:
 
-Shadcn/ui: biblioteca de componentes para React baseada no Radix UI e estilizada com Tailwind CSS
+Shadcn/ui: biblioteca de componentes para React baseada no Radix UI e estilizada com Tailwind CSS.
+
+KY: biblioteca JavaScript leve para fazer requisições HTTP, funcionando como uma alternativa simplificada ao fetch e ao axios.

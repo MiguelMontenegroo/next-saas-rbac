@@ -4,7 +4,7 @@ import { Label } from "@/components/ui/label";
 import Link from "next/link";
 
 
-export default function ForgorPasswordPage() {
+export default function ForgotPasswordPage() {
   return (
     <form action="" className="space-y-4">
       <div className="space-y-1">
