@@ -119,3 +119,5 @@ KY: biblioteca JavaScript leve para fazer requisições HTTP, funcionando como u
 cookies-next: biblioteca para Next.js que facilita o gerenciamento de cookies no lado do cliente e do servidor.
 
 next-themes: biblioteca para Next.js que facilita a implementação de temas dinâmicos, como modo claro e escuro.
+
+tanstack react query: biblioteca para gerenciamento de estado assíncrono em aplicações React, focada em lidar com requisições HTTP e o ciclo de vida de dados vindos de APIs

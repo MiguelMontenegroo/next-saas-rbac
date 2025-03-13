@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { ThemeProvider } from 'next-themes'
+import { Providers } from "./providers";
 
 
 export const metadata: Metadata = {
@@ -17,9 +17,10 @@ export default function RootLayout({
       <body
     
       >
-        <ThemeProvider attribute='class' defaultTheme="dark" disableTransitionOnChange>
+        <Providers>
+       
         {children}
-        </ThemeProvider>
+        </Providers>
       </body>
     </html>
   );
