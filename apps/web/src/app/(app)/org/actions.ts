@@ -5,8 +5,9 @@ import { HTTPError } from 'ky'
 import { createOrganization } from '@/http/create-organization'
 import { getCurrentOrg } from '@/auth/auth'
 import { updateOrganization } from '@/http/update-organization'
+import { revalidateTag } from 'next/cache'
 
-export const organizationSchema = z.object({
+const organizationSchema = z.object({
   name: z.string().min(4, { message: 'Please, include at least 4 characters.' }),
   domain: z.string().nullable().refine(value => {
     if (value) {
@@ -51,6 +52,8 @@ export async function createOrganizationAction(data: FormData) {
       domain,
       shouldAttachUsersByDomain,
     })    
+
+    revalidateTag('organizations')
   } catch (err) {
    if (err instanceof HTTPError) {
    const { message } = await err.response.json()
@@ -87,6 +90,8 @@ export async function updateOrganizationAction(data: FormData) {
       domain,
       shouldAttachUsersByDomain,
     })    
+
+    revalidateTag('organizations')
   } catch (err) {
    if (err instanceof HTTPError) {
    const { message } = await err.response.json()

@@ -20,10 +20,7 @@ export function OrganizationForm({
   initialData,
 }: OrganizationFormProps) {
      const formAction = isUpdating ? updateOrganizationAction : createOrganizationAction
-      const [{ success, message, errors }, handleSubmit, isPending] = useFormState(
-        formAction
-
-      )
+      const [{ success, message, errors }, handleSubmit, isPending] = useFormState(formAction)
 
   return (
 <form onSubmit={handleSubmit}  className="space-y-4">
