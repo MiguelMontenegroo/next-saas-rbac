@@ -43,5 +43,8 @@
     "extends": [
       "@saas/eslint-config/node"
     ]
+  },
+  "engines": {
+    "pnpm": "9.0.0"
   }
 }
