@@ -2,3 +2,6 @@ packages:
   - "apps/*"
   - "packages/*"
   - "config/*"
+
+overrides:
+  picomatch: "^3.0.0"
