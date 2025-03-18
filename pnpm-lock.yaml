@@ -75,6 +75,12 @@ importers:
       prisma:
         specifier: ^6.3.1
         version: 6.3.1
+      resolve-from:
+        specifier: ^5.0.0
+        version: 5.0.0
+      tinyglobby:
+        specifier: ^0.2.12
+        version: 0.2.12
       tsup:
         specifier: ^8.4.0
         version: 8.4.0(tsx@4.19.2)

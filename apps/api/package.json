@@ -33,6 +33,7 @@
     "dotenv-cli": "^8.0.0",
     "prisma": "^6.3.1",
     "resolve-from": "^5.0.0",
+    "tinyglobby": "^0.2.12",
     "tsup": "^8.4.0",
     "tsx": "^4.19.2"
   },
