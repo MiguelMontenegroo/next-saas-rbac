@@ -23,13 +23,7 @@ export function CreateInviteForm() {
     </Alert>
     )}
     
-    {success === true && message && (
-    <Alert variant='success'>
-     <AlertTriangle className="size-4" />
-     <AlertTitle>Success</AlertTitle>
-     <AlertDescription><p>{message}</p></AlertDescription>
-    </Alert>
-    )}
+  
     
     <div className="flex items-center gap-2">
     <div className="space-y-1 flex-1">

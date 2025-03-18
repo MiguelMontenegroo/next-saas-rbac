@@ -15,7 +15,7 @@ Note: I have standardized all my commits on GitHub in English to demonstrate my 
 - [ ] It should be able to authenticate using e-mail & password;
 - [ ] It should be able to authenticate using Github account;
 - [ ] It should be able to recover password using e-mail;
-- [x] It should be able to create an account (e-mail, name and password);
+- [ ] It should be able to create an account (e-mail, name and password);
 
 ### Organizations
 
@@ -88,36 +88,34 @@ Roles & permissions.
 - Only administrators and project authors may update/delete the project;
 - Members can leave their own organization;
 
-Tecnologias:
+![members](./apps/web/src/assets/membersdashboard.png)
+![settingsandbilling](./apps/web/src/assets/settingsplusbilling.png)
+![](./apps/web/src/assets/viewprojects.png)
+![](./apps/web/src/assets/signin.png)
+this next image was created using parallel route and interception routes on next
+![](./apps/web/src/assets/parallelroutenext.png)
 
-Back-end:
 
-Turborepo:  ferramenta de build e gerenciamento de monorepos, criada para otimizar o processo de desenvolvimento em projetos
+## Technologies
 
-CASL: biblioteca JavaScript voltada para a implementação de controle de acesso baseado em regras
+### Back-end:
 
-zod: biblioteca TypeScript para validação e definição de esquemas de dados
+- **Turborepo**: A build and monorepo management tool designed to optimize the development process in projects.  
+- **CASL**: A JavaScript library for implementing rule-based access control.  
+- **Zod**: A TypeScript library for data validation and schema definition.  
+- **Prisma**: A modern object-relational mapper (ORM) for Node.js and TypeScript that simplifies interaction with SQL databases like PostgreSQL, MySQL, and SQLite.  
+- **Bcryptjs**: A JavaScript library for password hashing.  
+- **Fakerjs**: A JavaScript library used to generate random mock data.  
+- **Fastify**: A web framework for Node.js focused on performance, low resource consumption, and extensibility.  
+- **Fastify Swagger UI**: A tool that automatically generates and displays API documentation for Fastify projects using Swagger UI.  
 
-PRISMA: O Prisma ORM é um mapeador objeto-relacional (ORM) moderno para Node.js e TypeScript, que facilita a interação com bancos de dados SQL, como PostgreSQL, MySQL e SQLite.
+---
 
-brcryptjs: biblioteca JavaScript para hash de senhas.
+### Front-end:
 
-fakerjs:  biblioteca JavaScript usada para gerar dados falsos (mock data) de forma aleatória.
+- **Shadcn/ui**: A React component library based on Radix UI and styled with Tailwind CSS.  
+- **KY**: A lightweight JavaScript library for making HTTP requests, serving as a simpler alternative to `fetch` and `axios`.  
+- **cookies-next**: A Next.js library that simplifies cookie management on both the client and server sides.  
+- **next-themes**: A Next.js library that makes implementing dynamic themes, such as light and dark modes, easy.  
+- **TanStack React Query**: A library for managing asynchronous state in React applications, focusing on handling HTTP requests and the lifecycle of data from APIs.  
 
-Fastify: O Fastify é um framework web para Node.js focado em desempenho, baixo consumo de recursos e extensibilidade.
-
-Fastify Swagger UI: O Fastify Swagger UI é uma ferramenta que permite gerar e visualizar automaticamente a documentação de APIs criadas com o Fastify, usando o Swagger UI
-
-------------
-
-Front-end:
-
-Shadcn/ui: biblioteca de componentes para React baseada no Radix UI e estilizada com Tailwind CSS.
-
-KY: biblioteca JavaScript leve para fazer requisições HTTP, funcionando como uma alternativa simplificada ao fetch e ao axios.
-
-cookies-next: biblioteca para Next.js que facilita o gerenciamento de cookies no lado do cliente e do servidor.
-
-next-themes: biblioteca para Next.js que facilita a implementação de temas dinâmicos, como modo claro e escuro.
-
-tanstack react query: biblioteca para gerenciamento de estado assíncrono em aplicações React, focada em lidar com requisições HTTP e o ciclo de vida de dados vindos de APIs
