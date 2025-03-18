@@ -32,6 +32,7 @@
     "@types/node": "^22.13.4",
     "dotenv-cli": "^8.0.0",
     "prisma": "^6.3.1",
+    "resolve-from": "^5.0.0",
     "tsup": "^8.4.0",
     "tsx": "^4.19.2"
   },
@@ -43,8 +44,5 @@
     "extends": [
       "@saas/eslint-config/node"
     ]
-  },
-  "engines": {
-    "pnpm": ">=9.0.0"
   }
 }
