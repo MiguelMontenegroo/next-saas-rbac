@@ -5,6 +5,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "outDir": "dist", // Define a pasta de saída para o build
+    "rootDir": "src", // Diz ao tsc que o código-fonte está em "src"
+    "strict": true, // (Opcional) Habilita checagens rigorosas de tipo
+    "esModuleInterop": true // (Opcional) Facilita importações de módulos CommonJS
   }
 }
