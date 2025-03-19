@@ -33,6 +33,7 @@
     "@types/bcryptjs": "^2.4.6",
     "@types/node": "^22.13.4",
     "dotenv-cli": "^8.0.0",
+    "esbuild": "^0.25.1",
     "fdir": "^6.4.3",
     "prisma": "^6.3.1",
     "resolve-from": "^5.0.0",
