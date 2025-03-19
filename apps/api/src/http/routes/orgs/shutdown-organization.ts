@@ -1,7 +1,7 @@
 import { auth } from "@/http/middlewares/auth";
 import { prisma } from "@/lib/prisma";
-import { FastifyInstance } from "fastify";
-import { ZodTypeProvider } from "fastify-type-provider-zod";
+import type { FastifyInstance } from "fastify";
+import type { ZodTypeProvider } from "fastify-type-provider-zod";
 import { organizationSchema } from '@saas/auth'
 import { z } from "zod";
 import { UnauthorizedError } from "../_errors/unauthorized-error";

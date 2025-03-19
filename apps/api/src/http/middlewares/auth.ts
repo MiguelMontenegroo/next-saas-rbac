@@ -1,4 +1,4 @@
-import { FastifyInstance } from "fastify";
+import type { FastifyInstance } from "fastify";
 import { UnauthorizedError } from "../routes/_errors/unauthorized-error";
 import { fastifyPlugin } from 'fastify-plugin'
 import { prisma } from "@/lib/prisma";
