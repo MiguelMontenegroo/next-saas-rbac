@@ -16,9 +16,12 @@ import { redirect } from "next/navigation"
 dayjs.extend(relativeTime)
 
 // Este é um componente Server que pode buscar dados diretamente
-export default async function InvitePage({ params }: { params: { id: string } }) {
+export default async function InvitePage({
+  params,
+}: {
+  params: { id: string };
+}) {
   const inviteId = params.id;
-
   // Buscar os dados do convite diretamente na renderização do servidor
   const { invite } = await getInvite(inviteId);
   const isUserAuthenticated = await isAuthenticated();

@@ -8,7 +8,9 @@
     "check-types": "turbo run check-types"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
     "cac": "^6.7.14",
+    "eslint-plugin-next": "^0.0.0",
     "picocolors": "^1.1.1",
     "picomatch": "^4.0.2",
     "turbo": "^2.4.2"
