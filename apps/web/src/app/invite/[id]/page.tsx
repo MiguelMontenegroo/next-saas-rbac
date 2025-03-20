@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Invite Page",
 }
 
-type InvitePageProps = {
+interface InvitePageProps {
   params: {
     id: string
   }
