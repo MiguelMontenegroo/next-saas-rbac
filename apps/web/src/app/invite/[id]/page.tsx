@@ -10,25 +10,17 @@ import { CheckCircle, LogIn, LogOut } from "lucide-react"
 import { cookies } from "next/headers"
 import Link from "next/link"
 import { redirect } from "next/navigation"
-import { InferGetServerSidePropsType } from "next";
+
 
 
 dayjs.extend(relativeTime)
 
-// Definindo getServerSideProps
-export const getServerSideProps = async ({ params }: { params: { id: string } }) => {
-  const result = await getInvite(params.id); // Fazendo a chamada para a API de convite
-  return { props: { invite: result.invite } }; // Passe a propriedade `invite` para a página
-};
+// Este é um componente Server que pode buscar dados diretamente
+export default async function InvitePage({ params }: { params: { id: string } }) {
+  const inviteId = params.id;
 
-// Componente InvitePage
-export default async function InvitePage({
-  invite,
-}: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  // Agora você pode acessar o objeto `invite` diretamente sem a duplicação do nome
-  const inviteId = invite.id;
-
-  // Não é necessário fazer uma nova chamada a getInvite, já que você já tem os dados
+  // Buscar os dados do convite diretamente na renderização do servidor
+  const { invite } = await getInvite(inviteId);
   const isUserAuthenticated = await isAuthenticated();
 
   let currentUserEmail = null;
@@ -39,6 +31,7 @@ export default async function InvitePage({
   }
 
   const userIsAuthenticatedWithSameEmailFromInvite = currentUserEmail === invite.email;
+
 
 async function signInFromInvite() {
   'use server'
