@@ -10,33 +10,35 @@ import { CheckCircle, LogIn, LogOut } from "lucide-react"
 import { cookies } from "next/headers"
 import Link from "next/link"
 import { redirect } from "next/navigation"
-import { Metadata } from "next"
+import { InferGetServerSidePropsType } from "next";
 
 
 dayjs.extend(relativeTime)
 
-interface InvitePageProps {
-  params: {
-    id: string
+// Definindo getServerSideProps
+export const getServerSideProps = async ({ params }: { params: { id: string } }) => {
+  const result = await getInvite(params.id); // Fazendo a chamada para a API de convite
+  return { props: { invite: result.invite } }; // Passe a propriedade `invite` para a página
+};
+
+// Componente InvitePage
+export default async function InvitePage({
+  invite,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
+  // Agora você pode acessar o objeto `invite` diretamente sem a duplicação do nome
+  const inviteId = invite.id;
+
+  // Não é necessário fazer uma nova chamada a getInvite, já que você já tem os dados
+  const isUserAuthenticated = await isAuthenticated();
+
+  let currentUserEmail = null;
+
+  if (isUserAuthenticated) {
+    const { user } = await auth();
+    currentUserEmail = user.email;
   }
-}
 
-
-export default async function InvitePage({ params }: InvitePageProps) {
-const inviteId = params.id
-
-const { invite } = await getInvite(inviteId)
-const isUserAuthenticated = await isAuthenticated()
-
-let currentUserEmail = null
-
-if (isUserAuthenticated) {
-  const { user } = await auth()
-
-  currentUserEmail = user.email
-}
-
-const userIsAuthenticatedWithSameEmailFromInvite = currentUserEmail === invite.email
+  const userIsAuthenticatedWithSameEmailFromInvite = currentUserEmail === invite.email;
 
 async function signInFromInvite() {
   'use server'
