@@ -25,6 +25,6 @@
       'no-console': 'off', // Allow console logs
       
       // Allow empty catch blocks
-      'no-empty': ['error', { 'allowEmptyCatch': true }], // Allow empty catch blocks but show error for others
+
     },
   };

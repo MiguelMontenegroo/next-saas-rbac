@@ -12,10 +12,13 @@ const signUpSchema = z.object({
   password: z.string().min(6, { message: 'Password should have at least 6 characters.' }),
   password_confirmation: z.string(),
 }).refine(data => {
-  data.password === data.password_confirmation, {
-    message: 'Password confirmation does not match.',
-    path: ['password_confirmation'], 
+  if (data.password !== data.password_confirmation) {
+    return false; // Return false if passwords don't match
   }
+  return true; // Otherwise return true
+}, {
+  message: 'Password confirmation does not match.',
+  path: ['password_confirmation'],
 })
 
 export async function signUpAction(data: FormData) {
