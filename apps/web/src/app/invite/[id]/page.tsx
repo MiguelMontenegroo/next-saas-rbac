@@ -12,15 +12,16 @@ import Link from "next/link"
 import { redirect } from "next/navigation"
 
 
+interface InvitePageProps {
+  params: { id: string };
+}
 
 dayjs.extend(relativeTime)
 
 // Este é um componente Server que pode buscar dados diretamente
 export default async function InvitePage({
   params,
-}: {
-  params: { id: string };
-}) {
+}: InvitePageProps) {
   const inviteId = params.id;
   // Buscar os dados do convite diretamente na renderização do servidor
   const { invite } = await getInvite(inviteId);

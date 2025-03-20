@@ -10,7 +10,8 @@
         "DATABASE_URL", 
         "GITHUB_OAUTH_CLIENT_ID", 
         "GITHUB_OAUTH_CLIENT_SECRET", 
-        "JWT_SECRET"
+        "JWT_SECRET",
+        "GITHUB_OAUTH_CLIENT_REDIRECT_URI"
       ]
     },
     "lint": {
