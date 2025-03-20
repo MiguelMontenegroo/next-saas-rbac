@@ -10,10 +10,15 @@ import { CheckCircle, LogIn, LogOut } from "lucide-react"
 import { cookies } from "next/headers"
 import Link from "next/link"
 import { redirect } from "next/navigation"
+import { Metadata } from "next"
 
 dayjs.extend(relativeTime)
 
-interface InvitePageProps {
+export const metadata: Metadata = {
+  title: "Invite Page",
+}
+
+type InvitePageProps = {
   params: {
     id: string
   }
