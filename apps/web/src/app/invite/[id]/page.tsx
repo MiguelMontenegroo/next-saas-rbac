@@ -16,12 +16,13 @@ import { Metadata } from "next"
 dayjs.extend(relativeTime)
 
 interface InvitePageProps {
-  invite: { id: string; email: string; };
-  currentUserEmail: string | null;
+  params: {
+    id: string
+  }
 }
 
 
-export default async function InvitePage({ params }: { params: { id: string } }) {
+export default async function InvitePage({ params }: InvitePageProps) {
 const inviteId = params.id
 
 const { invite } = await getInvite(inviteId)
