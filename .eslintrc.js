@@ -5,6 +5,7 @@
     extends: [
       'eslint:recommended', // Recommended ESLint rules
       'plugin:@typescript-eslint/recommended', // Recommended rules for TypeScript
+      'plugin:@next/next/recommended',
     ],
     rules: {
       // Disable the empty block rule
