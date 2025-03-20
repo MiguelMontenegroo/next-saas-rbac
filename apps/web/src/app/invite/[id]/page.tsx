@@ -19,13 +19,11 @@ export const metadata: Metadata = {
 }
 
 interface InvitePageProps {
-  params: {
-    id: string
-  }
+  params: Record<string, string | string[] | undefined>
 }
 
 export default async function InvitePage({ params }: InvitePageProps) {
-const inviteId = params.id
+const inviteId = params.id as string
 
 const { invite } = await getInvite(inviteId)
 const isUserAuthenticated = await isAuthenticated()
