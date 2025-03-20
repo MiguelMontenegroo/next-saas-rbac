@@ -30,7 +30,9 @@ const { token } = await signInWithGithub({ code })
           try {
             await acceptInvite(inviteId)
             cookieStore.delete('inviteId')
-          } catch {}
+          } catch (err) {
+            console.error('Error accepting invite:', err)
+          }
         }
 
     const redirectUrl = request.nextUrl.clone()
