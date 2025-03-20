@@ -11,34 +11,17 @@ import { cookies } from "next/headers"
 import Link from "next/link"
 import { redirect } from "next/navigation"
 import { Metadata } from "next"
-import { GetServerSidePropsContext } from 'next'
-import { GetServerSideProps } from 'next'
+
 
 dayjs.extend(relativeTime)
 
-export const metadata: Metadata = {
-  title: "Invite Page",
-}
-
 interface InvitePageProps {
-  params: {
-    id: string
-  }
+  invite: { id: string; email: string; };
+  currentUserEmail: string | null;
 }
 
-export const getServerSideProps: GetServerSideProps = async (context: GetServerSidePropsContext) => {
-  const { id } = context.params as { id: string }
 
-  // Lógica para buscar os dados com o `id`
-
-  return {
-    props: {
-      params: { id },
-    },
-  }
-}
-
-export default async function InvitePage({ params }: InvitePageProps) {
+export default async function InvitePage({ params }: { params: { id: string } }) {
 const inviteId = params.id
 
 const { invite } = await getInvite(inviteId)
