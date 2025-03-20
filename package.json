@@ -2,7 +2,7 @@
   "name": "next-saas-rbac",
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "turbo run build --cache=local:r,remote:r",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "check-types": "turbo run check-types"
